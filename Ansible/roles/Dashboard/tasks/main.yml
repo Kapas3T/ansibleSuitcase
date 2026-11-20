@@ -1,0 +1,3 @@
+- name: Inclure le bon fichier de tâches
+  include_tasks: "{{ setup_file | default('setup.yml') }}"
+  tags: always

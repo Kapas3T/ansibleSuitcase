@@ -1,0 +1,5 @@
+- name: Deploy Dashboard on Raspberry pi
+  hosts: all
+  gather_facts: no
+  roles:
+    - role: roles/Dashboard
