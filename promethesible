@@ -54,12 +54,23 @@ inventories () {
 }
 
 ###########################################################################
+#Help                                                                     #
+###########################################################################
+help(){
+    printf "NAME \n %s \n\n" $0
+    printf "SYNTAX: \n ./promethesible [-args : -h, -i, --help --install] \n\nARGS: \n -h --help    : help    : Shows help menu. \n -i --install : install : Installs and sets up the environnement. \n"
+}
+
+
 
 mode=ansible-playbook
 setup_file=""
 
 while [ "$#" -gt 0 ]; do
     case "$1" in
+        -h|--help)
+            help
+            exit ;;
         --prod)
             inventory_mode="prod"
             shift ;;
